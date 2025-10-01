@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pragathi Degree College | Inspiring Excellence</title>
+    <meta name="description" content="Welcome to Pragathi Degree College, a premier institution in Hyderabad offering top-tier UG & PG courses with a focus on academic excellence, placements, and holistic development.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* CSS for Header Social Icons */
+        .nav-menu {
+            /* Ensures the menu is a flex container for alignment */
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-social-item a.nav-link {
+            padding: 0 10px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-social-item .nav-link i {
+            color: #ffffff;
+            font-size: 1.1rem;
+            transition: color 0.3s ease, transform 0.3s ease;
+            vertical-align: middle;
+        }
+
+        .nav-social-item .nav-link:hover i {
+            color: #f0ad4e;
+            transform: scale(1.2);
+        }
+
+        /* THIS IS THE NEW RULE TO PUSH ICONS TO THE RIGHT */
+        .push-to-right {
+            margin-left: auto;
+        }
+    </style>
+</head>
+<body>
+<div id="tsparticles"></div>
+
+<header class="site-header">
+    <div class="header-container container">
+        <div class="logo-container">
+            <a href="index.html" class="logo">
+                <img src="pic/logo.png" alt="Pragathi College Logo">
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li class="dropdown">
+                    <a href="about-college.html" class="nav-link">About Us <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-content">
+                        <li><a href="about-college.html">About Pragathi</a></li>
+                        <li><a href="administration.html">Administration</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="courses.html" class="nav-link">Courses <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-content">
+                        <li class="sub-dropdown">
+                            <a href="co-ed-ug-courses.html">Co-Ed UG <i class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-dropdown-content">
+                                <li><a href="bba.html">BBA</a></li>
+                                <li><a href="Bca1.html">BCA</a></li>
+                                <li><a href="BSC1.html">Bsc</a></li>
+                                <li><a href="bcom.html">B.Com</a></li>
+                            </ul>
+                        </li>
+                        <li class="sub-dropdown">
+                            <a href="co-ed-pg-courses.html">Co-Ed PG <i class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-dropdown-content">
+                                <li><a href="mcom.html">M.Com</a></li>
+                                <li><a href="msc-cs.html">M.Sc (Comp. Sci.)</a></li>
+                                <li><a href="msc-stats.html">M.Sc (Statistics)</a></li>
+                            </ul>
+                        </li>
+                        <li class="sub-dropdown">
+                            <a href="womens-courses.html">Women's Courses <i class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-dropdown-content">
+                                <li><a href="womens-bcom.html">B.Com (General)</a></li>
+                                <li><a href="womens-bsc.html">B.Sc (Life Science)</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="academics.html" class="nav-link">Academics <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-content">
+                        <li class="sub-dropdown">
+                            <a href="achievements.html">Achievements <i class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-dropdown-content">
+                                <li><a href="student-achievements.html">Student</a></li>
+                                <li><a href="faculty-achievements.html">Faculty</a></li>
+                            </ul>
+                        </li>
+                        <li class="sub-dropdown">
+                            <a href="laboratories.html">Laboratories <i class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-dropdown-content">
+                                <li><a href="computer-labs.html">Computer Labs</a></li>
+                                <li><a href="science-labs.html">Science Labs</a></li>
+                            </ul>
+                        </li>
+                        <li class="sub-dropdown">
+                            <a href="examinations.html">Examinations <i class="fas fa-chevron-right"></i></a>
+                            <ul class="sub-dropdown-content">
+                                <li><a href="exam-schedule.html">Exam Schedule</a></li>
+                                <li><a href="results.html">Results</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="placements.html" class="nav-link">Placements</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+
+                <li class="nav-social-item push-to-right"><a href="https://www.facebook.com/profile.php?id=61581052749122" class="nav-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                <li class="nav-social-item"><a href="https://www.instagram.com/pragathi_kphb/" class="nav-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                <li class="nav-social-item"><a href="https://www.linkedin.com/in/prashanth-chowdary-812671357/" class="nav-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+            <div class="header-right">
+                <div class="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-video-container">
+                <video autoplay loop muted playsinline class="hero-video">
+                    <source src="pic/pragathi4.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content container">
+                <h1 class="hero-title">WELCOME TO PRAGATHI</h1>
+                <p class="hero-tagline">25+ Years of Transforming Lives. Dedicated to Helping Students Achieve Greatness.</p>
+                <a href="contact.html" class="btn btn-primary">Enroll Today</a>
+            </div>
+        </section>
+
+        <section id="stats" class="section-padding section-bg-light">
+             <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item"><i class="fas fa-chalkboard-teacher"></i><h3 class="stat-number">15+</h3><p class="stat-label">Offered Courses</p></div>
+                    <div class="stat-item"><i class="fas fa-user-graduate"></i><h3 class="stat-number">95%</h3><p class="stat-label">Placement Rate</p></div>
+                    <div class="stat-item"><i class="fas fa-university"></i><h3 class="stat-number">25</h3><p class="stat-label">Years of Excellence</p></div>
+                    <div class="stat-item"><i class="fas fa-users"></i><h3 class="stat-number">5,000+</h3><p class="stat-label">Happy Students</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section-padding">
+            <div class="container">
+                 <div class="section-header">
+                    <h2 class="section-title">Why Choose <span class="text-accent">Pragathi</span>?</h2>
+                </div>
+                <p class="about-us-intro">
+                    For over 25 years, Pragathi Group of Colleges has been a beacon of higher education in Hyderabad. We are committed to nurturing talent and fostering academic excellence through a blend of rigorous curriculum, experienced faculty, and a focus on holistic student development.
+                </p>
+                <div class="management-grid">
+                    <div class="management-card">
+                        <div class="management-img"><img src="pp/ravindr_chairman1.png" alt="Director"></div>
+                        <div class="management-info">
+                            <h3><a href="director.html">Mr.s.Ravinder rao</a></h3>
+                            <p class="management-title">Director</p>
+                            <p>Guiding the institution with a vision for the future, ensuring academic integrity and innovation.</p>
+                        </div>
+                    </div>
+                    <div class="management-card">
+                        <div class="management-img"><img src="pp/principal11.jpg" alt="Principal"></div>
+                        <div class="management-info">
+                            <h3><a href="principal.html">Mr.sankineni sridhar rao</a></h3>
+                            <p class="management-title">Principal</p>
+                            <p>Overseeing the daily academic and administrative functions to create a seamless learning environment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+      <section id="courses" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Premier <span class="text-accent">Courses</span></h2>
+                    <p class="section-subtitle">Empowering students with knowledge and skills for a successful future.</p>
+                </div>
+                <div class="featured-courses-grid">
+                    <div class="course-card">
+                        <div class="course-card-image"><img src="pp/bca_class.jpg" alt="BCA Program"></div>
+                        <div class="course-card-content">
+                            <h3>BCA</h3>
+                            <p>Our BCA program equips students with essential business skills for a successful career in the corporate world.</p>
+                            <a href="Bca1.html" class="btn-learn-more">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-card-image"><img src="pp/bsc_kav.jpg" alt="BSC Program"></div>
+                        <div class="course-card-content">
+                            <h3>BSC</h3>
+                            <p>Providing a strong foundation in commerce, accounting, and finance to prepare students for diverse opportunities.</p>
+                            <a href="BSC1.html" class="btn-learn-more">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-card-image"><img src="pp/bcom1.jpg" alt="BBA Program"></div>
+                        <div class="course-card-content">
+                            <h3>BBA</h3>
+                            <p>Our BBA programs offer a strong foundation in science, preparing students for careers in technology and research.</p>
+                            <a href="bba.html" class="btn-learn-more">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="detailed-courses-section" class="section-padding" style="background-color: var(--nav-bg);">
+            <div class="container">
+                <div class="detailed-courses">
+                    <div class="course-list-container">
+                        <h3 class="course-list-title">Undergraduate (UG) Courses</h3>
+                        <ul class="course-list">
+                            <li><a href="bba.html">» B.B.A</a></li>
+                            <li><a href="Bca1.html">» B.C.A</a></li>
+                            <li><a href="bcom.html">» B.Com (General)</a></li>
+                            <li><a href="bcom.html">» B.Com (Computers)</a></li>
+                            <li><a href="BSC1.html">» B.Sc (M.S.Cs)</a></li>
+                            <li><a href="BSC1.html">» B.Sc (M.P.Cs)</a></li>
+                            <li><a href="BSC1.html">» B.Sc (M.E.Cs)</a></li>
+                        </ul>
+                    </div>
+                    <div class="course-center-image">
+                        <img src="pic/razapk.jpg" alt="Pragathi College Student">
+                        <a href="contact.html" class="btn btn-primary apply-now-btn">Apply Now</a>
+                    </div>
+                    <div class="course-list-container">
+                        <h3 class="course-list-title">Postgraduate (PG) Courses</h3>
+                        <ul class="course-list">
+                            <li><a href="mcom.html">» M.Com</a></li>
+                            <li><a href="msc-cs.html">» M.Sc (Computer Science)</a></li>
+                            <li><a href="msc-stats.html">» M.Sc (Statistics)</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="placements" class="section-padding section-bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Key <span class="text-accent">Recruiters</span></h2>
+                    <p class="section-subtitle">Connecting our talent with leading companies worldwide.</p>
+                </div>
+                <div class="recruiters-carousel-container">
+                    <div class="recruiters-carousel">
+                         <div class="recruiter-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Tata_Consultancy_Services_Logo.svg" alt="TCS"></div>
+                         <div class="recruiter-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Infosys_logo.svg" alt="Infosys"></div>
+                         <div class="recruiter-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Wipro_Logo_2017.svg" alt="Wipro"></div>
+                         <div class="recruiter-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon"></div>
+                         <div class="recruiter-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Cognizant_logo.svg" alt="Cognizant"></div>
+                         <div class="recruiter-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Capgemini_logo.svg" alt="Capgemini"></div>
+                         <div class="recruiter-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM"></div>
+                         <div class="recruiter-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Accenture_logo.svg" alt="Accenture"></div>
+                         <div class="recruiter-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Tata_Consultancy_Services_Logo.svg" alt="TCS"></div>
+                         <div class="recruiter-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Infosys_logo.svg" alt="Infosys"></div>
+                         <div class="recruiter-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Wipro_Logo_2017.svg" alt="Wipro"></div>
+                         <div class="recruiter-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon"></div>
+                         <div class="recruiter-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Cognizant_logo.svg" alt="Cognizant"></div>
+                         <div class="recruiter-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Capgemini_logo.svg" alt="Capgemini"></div>
+                         <div class="recruiter-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM"></div>
+                         <div class="recruiter-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Accenture_logo.svg" alt="Accenture"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<section id="faculty" class="section-padding">
+     <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Our Esteemed <span class="text-accent">Faculty</span></h2>
+            <p class="section-subtitle">Meet the experienced mentors guiding our students to success.</p>
+        </div>
+        <div class="faculty-grid">
+    <div class="faculty-card">
+        <img src="pp/ratnaji_sir.webp" alt="ratnaji" class="faculty-img">
+        <div class="faculty-info">
+            <h3><a href="ratnaji.html">major D.ratnaji</a></h3>
+            <p class="faculty-qual">MA Telugu,TPT</p>
+            <p class="faculty-dept">Head of Department, NCC</p>
+        </div>
+    </div>
+    <div class="faculty-card">
+        <img src="lectures/pushap.png" alt="K.pushpa latha" class="faculty-img">
+        <div class="faculty-info">
+            <h3><a href="pushpalatha.html">k.pushpa latha</a></h3>
+            <p class="faculty-qual">MSc,M phil Statistics</p>
+            <p class="faculty-dept">Department of Statistics</p>
+        </div>
+    </div>
+    <div class="faculty-card">
+        <img src="lectures/siva priya.jpg" alt="N shiva priya" class="faculty-img">
+        <div class="faculty-info">
+            <h3><a href="sivapriya.html">N.siva priya</a></h3>
+            <p class="faculty-qual">MSc computr-science</p>
+            <p class="faculty-dept">Department of computer</p>
+        </div>
+    </div>
+    <div class="faculty-card">
+        <img src="lectures/sharanya.jpg" alt="V.vasavi" class="faculty-img">
+        <div class="faculty-info">
+            <h3><a href="vasavi.html">v.vasavi</a></h3>
+            <p class="faculty-qual">MSc science</p>
+            <p class="faculty-dept">Department of computer-science</p>
+        </div>
+    </div>
+</div>
+
+        <div class="view-all-container">
+            <a href="faculty.html" class="btn btn-primary">View All Faculty</a>
+        </div>
+
+    </div>
+</section>
+
+       
+    <section id="testimonials" class="section-padding">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">What Our <span class="text-accent">Students Say</span></h2>
+        </div>
+        <div class="testimonial-carousel-wrapper">
+            <div class="testimonial-carousel">
+                <div class="testimonial-card">
+                    <p class="quote">"The faculty are incredibly supportive. Pragathi truly fosters an environment for growth!"</p>
+                    <div class="student-info">
+                        <img src="pic/sunanda.jpg" alt="Student Sunanda R.">
+                        <div><span class="student-name">Sunanda R.</span><span class="student-course">Bca Student</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="quote">"I found my passion here! The curriculum is practical and the placement cell is dedicated to student success."</p>
+                    <div class="student-info">
+                        <img src="pic/madhuri.jpg" alt="Student Madhuri K.">
+                        <div><span class="student-name">Madhuri K.</span><span class="student-course">B.Sc (MSCS) Alumni</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="quote">"Pragathi prepared me for the challenges of the professional world. Highly recommend their courses and vibrant campus life."</p>
+                    <div class="student-info">
+                        <img src="pic/sibtan.jpg" alt="Student Sibtan A.">
+                        <div><span class="student-name">Sibtan A.</span><span class="student-course">M.Com Graduate</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="quote">"The research opportunities are exceptional. It pushed me to think critically and innovatively."</p>
+                    <div class="student-info">
+                        <img src="pic/priya.jpg" alt="Student Priya S.">
+                        <div><span class="student-name">Priya S.</span><span class="student-course">B.Sc (Physics) Student</span></div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="quote">"The faculty are incredibly supportive. Pragathi truly fosters an environment for growth!"</p>
+                    <div class="student-info">
+                        <img src="pic/bhasker.jpg" alt="bhaskar">
+                        <div><span class="student-name">Sunanda R.</span><span class="student-course">BBA Student</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="quote">"I found my passion here! The curriculum is practical and the placement cell is dedicated to student success."</p>
+                    <div class="student-info">
+                        <img src="pic/shiva.jpg" alt="Shiva">
+                        <div><span class="student-name">Madhuri K.</span><span class="student-course">B.Sc (MSCS) Alumni</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="quote">"Pragathi prepared me for the challenges of the professional world. Highly recommend their courses and vibrant campus life."</p>
+                    <div class="student-info">
+                        <img src="https://via.placeholder.com/60x60/cccccc/000000?text=S" alt="Student Sibtan A.">
+                        <div><span class="student-name">Sibtan A.</span><span class="student-course">M.Com Graduate</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="quote">"The research opportunities are exceptional. It pushed me to think critically and innovatively."</p>
+                    <div class="student-info">
+                        <img src="pic/raz.jpg" alt="raza.">
+                        <div><span class="student-name">Priya S.</span><span class="student-course">B.Sc (Physics) Student</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="gallery" class="section-padding">
+    <div class="container">
+        <div class="section-header">
+             <h2 class="section-title">Life at <span class="text-accent">Pragathi</span></h2>
+             <p class="section-subtitle">A glimpse into our vibrant campus, events, sports, and activities.</p>
+        </div>
+
+        <div class="gallery-preview-grid">
+            <div class="preview-item"><img src="pp/traditional_day5.webp" alt="Gallery Preview Image 1"></div>
+            <div class="preview-item"><img src="pic/fest3.jpg" alt="Gallery Preview Image 2"></div>
+            <div class="preview-item"><img src="pp/new_year.jpg" alt="Gallery Preview Image 3"></div>
+            <div class="preview-item"><img src="pp/ncc_ratnaji1.webp" alt="Gallery Preview Image 4"></div>
+            <div class="preview-item"><img src="pp/anatagi.jpg" alt="Gallery Preview Image 5"></div>
+        </div>
+
+        <div class="view-all-container">
+            <a href="gallery.html" class="btn btn-primary">View Full Gallery</a>
+    
+        </div>
+    </div>
+</section>
+<div class="lightbox-overlay" id="lightbox">
+    <button class="lightbox-close">&times;</button>
+    <button class="lightbox-prev">&#10094;</button>
+    <button class="lightbox-next">&#10095;</button>
+    <div class="lightbox-content">
+        </div>
+</div>
+<section id="contact" class="section-padding" style="background-color: var(--bg-light);">
+    <div class="container">
+        <div class="cta-container">
+            <h2 class="section-title">Ready to <span class="text-accent">Begin Your Journey?</span></h2>
+            <p class="section-subtitle" style="max-width: 650px;">
+                Our admission process is simple. Click the button below to fill out our online application form and a member of our team will get in touch with you shortly.
+            </p>
+            <a href="contact.html" class="btn btn-primary" style="margin-top: 20px; padding: 15px 40px; font-size: 1.1rem;">Apply Online Now</a>
+        </div>
+    </div>
+</section>
+    </main>
+
+<footer class="site-footer">
+    <div class="footer-main container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="pic/logo.png" alt="Pragathi College Logo" class="footer-logo">
+                <p class="footer-address">
+                    H.No: 12-6-2/210 Metro pillar number 814,
+                    Viveknagar, Kukatpally, Hyderabad-500072.
+                </p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/profile.php?id=61581052749122" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/pragathi_kphb/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/prashanth-chowdary-812671357/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about-college.html">About Us</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Co-Ed Courses</h4>
+                <ul>
+                    <li><a href="Bca1.html">BCA</a></li>
+                    <li><a href="BSC1.html">BSc</a></li>
+                    <li><a href="bba.html">B.Sc</a></li>
+                    <li><a href="bcom.html">B.Com</a></li>
+                    <li><a href="mcom.html">M.Com</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Weekly Newsletter</h4>
+                <p>Stay updated with our latest news and events.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Pragathi Degree College. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <a href="https://wa.me/919390726237" target="_blank" class="floating-btn whatsapp-btn" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+<script src="script.js"></script>
+
+</body>
+</html>

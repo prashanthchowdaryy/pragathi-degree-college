@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pragathi Degree College | Inspiring Excellence</title>
+    <meta name="description" content="Welcome to Pragathi Degree College, a premier institution in Hyderabad offering top-tier UG & PG courses with a focus on academic excellence, placements, and holistic development.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* ============================
+           ROOT VARIABLES & GLOBAL STYLES
+        ============================= */
+        :root {
+            --bg-dark: #0F172A; /* Dark Blue */
+            --bg-light: #F8FAFC; /* Off-white */
+            --text-dark: #1E293B;
+            --text-light: #E2E8F0;
+            --accent-primary: #0EA5E9; /* Sky Blue */
+            --accent-secondary: #F59E0B; /* Amber/Gold */
+            --nav-bg: #1E293B; /* Navy Blue */
+            --nav-height: 80px;
+            --font-family: 'Poppins', sans-serif;
+            --border-color: #E2E8F0;
+        }
+
+        /* Base styles */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; scroll-padding-top: var(--nav-height); }
+        body {
+            font-family: var(--font-family);
+            background-color: #fff;
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        /* Utility classes */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .section-padding { padding: 80px 0; }
+        .section-bg-dark { background-color: var(--bg-dark); color: var(--text-light); }
+        .section-bg-dark .section-title { color: var(--text-light); }
+        .section-bg-light { background-color: var(--bg-light); }
+        .section-header { text-align: center; margin-bottom: 50px; }
+        .section-title { font-size: 2.8rem; font-weight: 700; margin-bottom: 10px; }
+        .section-subtitle { font-size: 1.1rem; color: #6B7280; }
+        .text-accent { color: var(--accent-primary); }
+
+        .btn {
+            display: inline-block; padding: 12px 32px; border-radius: 8px; font-weight: 600;
+            text-decoration: none; transition: all 0.3s ease; border: 2px solid transparent;
+        }
+        .btn-primary { background-color: var(--accent-secondary); color: var(--bg-dark); }
+        .btn-primary:hover { background-color: #D97706; transform: translateY(-3px); }
+
+        /* ============================
+           HEADER
+        ============================= */
+        .site-header {
+            position: sticky; top: 0; z-index: 1000;
+            height: var(--nav-height); background-color: var(--nav-bg);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .header-container { display: flex; height: 100%; }
+        .logo-container {
+            background-color: #fff; display: flex; align-items: center;
+            padding: 0 40px; position: relative;
+            clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+        }
+        .logo img { height: 40px; display: block; }
+
+        .main-nav {
+            display: flex; justify-content: space-between; align-items: center;
+            flex-grow: 1; padding-left: 30px;
+        }
+        .nav-menu { display: flex; list-style: none; gap: 35px; }
+        .nav-link {
+            color: var(--text-light); text-decoration: none; font-weight: 600;
+            padding: 10px 0; position: relative; transition: color 0.3s;
+        }
+        .nav-link::after {
+            content: ''; position: absolute; bottom: 0; left: 0;
+            width: 0; height: 2px; background-color: var(--accent-primary);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover { color: var(--accent-primary); }
+        .nav-link:hover::after { width: 100%; }
+        .header-right { display: flex; align-items: center; gap: 20px; }
+        .header-social a { color: var(--text-light); font-size: 1rem; transition: color 0.3s; }
+        .header-social a:not(:last-child) { margin-right: 15px; }
+        .header-social a:hover { color: var(--accent-primary); }
+        .hamburger { display: none; cursor: pointer; }
+        .bar { display: block; width: 25px; height: 3px; margin: 5px auto; background-color: #fff; transition: all 0.3s; }
+
+        /* ============================
+           HERO & SECTIONS
+        ============================= */
+        .hero {
+            position: relative; height: calc(100vh - var(--nav-height));
+            display: flex; align-items: center; color: #fff; text-align: center;
+        }
+        .hero-video-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; }
+        .hero-video { width: 100%; height: 100%; object-fit: cover; }
+        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(15, 23, 42, 0.6); }
+        .hero-content { position: relative; z-index: 2; }
+        .hero-title { font-size: 3.5rem; font-weight: 800; margin-bottom: 20px; }
+        .hero-tagline { font-size: 1.25rem; margin-bottom: 30px; max-width: 600px; margin-inline: auto; }
+
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; text-align: center; }
+        .stat-item i { font-size: 2.5rem; color: var(--accent-primary); margin-bottom: 15px; }
+        .stat-number { font-size: 2.5rem; font-weight: 700; color: var(--text-dark); margin-bottom: 5px; }
+        .stat-label { font-size: 1rem; color: #64748B; }
+
+        .why-us-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .why-us-image img { width: 100%; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .features-list { list-style: none; margin-top: 20px; }
+        .features-list li { font-size: 1.1rem; margin-bottom: 15px; display: flex; align-items: center; }
+        .features-list i { color: var(--accent-primary); font-size: 1.2rem; margin-right: 15px; }
+
+        /* ============================
+           UPDATED COURSES SECTION STYLES
+        ============================= */
+        .courses-grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        .course-category-card {
+            background-color: #1E293B; /* Slightly lighter than main dark bg */
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 5px solid var(--accent-primary);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .course-category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .course-category-card h3 {
+            font-size: 1.4rem;
+            color: var(--accent-primary);
+            margin-bottom: 20px;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 10px;
+        }
+        .course-category-card ul {
+            list-style: none;
+        }
+        .course-category-card li {
+            color: var(--text-light);
+            margin-bottom: 12px;
+            font-size: 1rem;
+        }
+
+        /* ============================
+           RECRUITERS CAROUSEL
+        ============================= */
+        .recruiters-carousel-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding: 30px 0;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        .recruiters-carousel-container::before,
+        .recruiters-carousel-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 100px;
+            height: 100%;
+            z-index: 2;
+        }
+        .recruiters-carousel-container::before {
+            left: 0;
+            background: linear-gradient(to right, #fff, transparent);
+        }
+        .recruiters-carousel-container::after {
+            right: 0;
+            background: linear-gradient(to left, #fff, transparent);
+        }
+        .recruiters-carousel {
+            display: flex;
+            animation: scrollLogos 40s linear infinite;
+            will-change: transform;
+            white-space: nowrap;
+        }
+        .recruiters-carousel-container:hover .recruiters-carousel {
+            animation-play-state: paused;
+        }
+        .recruiter-logo {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 40px;
+            height: 80px;
+            filter: grayscale(100%) opacity(0.6);
+            transition: filter 0.3s ease;
+        }
+        .recruiter-logo:hover {
+            filter: grayscale(0%) opacity(1);
+        }
+        .recruiter-logo img {
+            max-height: 100%;
+            max-width: 150px;
+            object-fit: contain;
+        }
+        @keyframes scrollLogos {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* ============================
+           TESTIMONIALS SECTION
+        ============================= */
+        .testimonial-carousel-wrapper { 
+            overflow: hidden; 
+            position: relative;
+            padding-bottom: 20px;
+        }
+        .testimonial-carousel {
+            display: flex;
+            gap: 30px;
+            padding: 10px;
+            width: calc((350px + 30px) * 8); /* (card width + gap) * (number of cards * 2 for loop) */
+            animation: scrollTestimonials 60s linear infinite;
+        }
+        .testimonial-carousel-wrapper:hover .testimonial-carousel {
+            animation-play-state: paused;
+        }
+        @keyframes scrollTestimonials {
+             0% { transform: translateX(0); }
+             100% { transform: translateX(calc(-1 * (350px + 30px) * 4)); } /* (card width + gap) * original number of cards */
+        }
+        .testimonial-card {
+            flex: 0 0 350px; background: #fff; padding: 30px; border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08); border-top: 5px solid var(--accent-primary);
+            display: flex;
+            flex-direction: column;
+        }
+        .quote { font-style: italic; margin-bottom: 25px; flex-grow: 1; }
+        .student-info { display: flex; align-items: center; margin-top: auto; }
+        .student-info img { width: 60px; height: 60px; border-radius: 50%; margin-right: 15px; object-fit: cover; }
+        .student-name { font-weight: 700; color: var(--accent-primary); display: block; }
+        .student-course { font-size: 0.9rem; color: #6B7280; }
+
+        /* ============================
+           TABBED GALLERY & LIGHTBOX
+        ============================= */
+        .gallery-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        .tab-link {
+            padding: 10px 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            border: 2px solid var(--border-color);
+            background-color: #fff;
+            color: var(--text-dark);
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .tab-link:hover, .tab-link.active {
+            background-color: var(--accent-primary);
+            color: #fff;
+            border-color: var(--accent-primary);
+        }
+
+        .gallery-grid {
+            display: none;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .gallery-grid.active {
+            display: grid;
+        }
+        .gallery-item {
+            position: relative; overflow: hidden; border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); display: block;
+            text-decoration: none; cursor: pointer;
+        }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+        .gallery-item:hover img { transform: scale(1.1); }
+        .gallery-item span {
+            position: absolute; bottom: 0; left: 0; width: 100%; padding: 15px;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); color: #fff; font-weight: 600;
+            transition: background 0.3s;
+        }
+        .gallery-item:hover span {
+            background: linear-gradient(to top, rgba(14, 165, 233, 0.9), transparent);
+        }
+        .video-item::after {
+            content: '\f144'; font-family: 'Font Awesome 6 Free'; font-weight: 900;
+            position: absolute; top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4rem; color: rgba(255, 255, 255, 0.8);
+            transition: all 0.3s ease; text-shadow: 0 0 15px rgba(0,0,0,0.5);
+            pointer-events: none;
+        }
+        .gallery-item:hover.video-item::after {
+            color: #fff; transform: translate(-50%, -50%) scale(1.1);
+        }
+        
+        /* Lightbox (Popup) Styles */
+        .lightbox {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.85);
+            z-index: 2000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .lightbox.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .lightbox-content {
+            position: relative;
+        }
+        .lightbox-content img, .lightbox-content video {
+            max-width: 90vw;
+            max-height: 85vh;
+            border-radius: 8px;
+        }
+        .lightbox-close {
+            position: absolute; top: -40px; right: 0;
+            font-size: 2.5rem;
+            color: #fff;
+            cursor: pointer;
+            line-height: 1;
+        }
+        
+        /* ============================
+           NEW FACULTY SECTION STYLES
+        ============================= */
+        .faculty-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        .faculty-card {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+            text-align: center;
+            padding: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .faculty-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        .faculty-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 20px auto;
+            border: 5px solid #fff;
+            box-shadow: 0 0 0 5px var(--accent-primary);
+        }
+        .faculty-name {
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            margin-bottom: 5px;
+        }
+        .faculty-qual {
+            font-size: 1rem;
+            color: var(--accent-primary);
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        .faculty-dept {
+            font-size: 0.9rem;
+            color: #6B7280;
+        }
+
+        /* ============================
+           CONTACT SECTION & FOOTER
+        ============================= */
+        .contact-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; }
+        .contact-form-container h3, .contact-info-container h3 { font-size: 1.5rem; margin-bottom: 20px; color: var(--accent-primary); }
+        .contact-form input, .contact-form textarea, .contact-form select {
+            width: 100%; padding: 15px; border-radius: 8px; border: 1px solid var(--border-color);
+            background-color: var(--bg-light); margin-bottom: 15px; font-family: var(--font-family);
+            font-size: 1rem;
+        }
+        .contact-info-container p { margin-bottom: 15px; }
+        .contact-info-container i { margin-right: 10px; color: var(--accent-primary); }
+
+        .site-footer { background-color: var(--nav-bg); color: var(--text-light); }
+        .footer-main { padding: 60px 0; }
+        .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.5fr; gap: 40px; }
+        .footer-col h4 { font-size: 1.1rem; color: var(--accent-primary); margin-bottom: 20px; font-weight: 600; }
+        .footer-col p { font-size: 0.9rem; line-height: 1.8; color: #94A3B8; }
+        .footer-logo { margin-bottom: 20px; height: 40px; }
+        .footer-address { margin-bottom: 15px; }
+        .footer-contact-link { color: #94A3B8; text-decoration: none; transition: color 0.3s; }
+        .footer-contact-link:hover { color: var(--accent-primary); }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 10px; }
+        .footer-col ul a { color: #94A3B8; text-decoration: none; transition: color 0.3s; font-size: 0.9rem; }
+        .footer-col ul a:hover { color: var(--accent-primary); }
+
+        .newsletter-form input {
+            width: 100%; padding: 12px; background-color: #334155;
+            border: 1px solid #475569; border-radius: 6px; color: var(--text-light); margin-bottom: 10px;
+        }
+        .newsletter-form button {
+            width: 100%; padding: 12px; background-color: var(--accent-primary);
+            border: none; border-radius: 6px; color: #fff; font-weight: 600; cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .newsletter-form button:hover { background-color: #0284C7; }
+        .footer-bottom { background-color: var(--bg-dark); padding: 20px 0; text-align: center; font-size: 0.9rem; }
+
+        .floating-btn.whatsapp-btn {
+            position: fixed; right: 20px; bottom: 20px; z-index: 999;
+            background-color: #25D366; color: #fff; font-size: 1.8rem;
+            width: 60px; height: 60px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: transform 0.3s;
+        }
+        .whatsapp-btn:hover { transform: scale(1.1); }
+
+        /* ============================
+           RESPONSIVE DESIGN
+        ============================= */
+        @media (max-width: 1024px) {
+            .logo-container { padding: 0 20px; clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%); }
+            .main-nav { padding-left: 20px; }
+            .nav-menu { gap: 20px; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+            .footer-col { grid-column: span 1 !important; } /* Reset column span for tablet */
+        }
+
+        @media (max-width: 768px) {
+            .section-title { font-size: 2.2rem; }
+            .nav-menu {
+                position: fixed; left: -100%; top: var(--nav-height); flex-direction: column;
+                background-color: var(--nav-bg); width: 100%; height: calc(100vh - var(--nav-height));
+                padding-top: 50px; transition: 0.3s ease; gap: 30px; text-align: center;
+            }
+            .nav-menu.active { left: 0; }
+            .hamburger { display: block; }
+            .hamburger.active .bar:nth-child(2) { opacity: 0; }
+            .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+            .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+            .header-social { display: none; }
+            .main-nav { justify-content: flex-end; }
+            
+            .hero-title { font-size: 2.5rem; }
+            .stats-grid, .why-us-grid, .contact-grid { grid-template-columns: 1fr; }
+            .why-us-image { grid-row: 1; margin-bottom: 30px; }
+
+            .testimonial-card { flex: 0 0 80%; }
+            .testimonial-carousel { width: calc((80vw + 30px) * 8); }
+            @keyframes scrollTestimonials {
+                 0% { transform: translateX(0); }
+                 100% { transform: translateX(calc(-1 * (80vw + 30px) * 4)); }
+            }
+            
+            .footer-grid { grid-template-columns: 1fr; }
+
+            .recruiters-carousel-container { padding: 20px 0; }
+            .recruiter-logo { padding: 0 20px; height: 60px; }
+            .recruiter-logo img { max-width: 120px; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title { font-size: 1.8rem; }
+            .stats-grid { grid-template-columns: 1fr 1fr; } /* Two columns on small screens */
+            .testimonial-card { flex: 0 0 90%; }
+            .testimonial-carousel { width: calc((90vw + 30px) * 8); }
+            @keyframes scrollTestimonials {
+                 0% { transform: translateX(0); }
+                 100% { transform: translateX(calc(-1 * (90vw + 30px) * 4)); }
+            }
+            .recruiters-carousel { animation-duration: 30s; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-container container">
+            <div class="logo-container">
+                <a href="index.html" class="logo">
+                    <!-- Make sure you have a logo.png file in the same directory -->
+                    <img src="https://placehold.co/200x60/ffffff/0F172A?text=Pragathi" alt="Pragathi College Logo">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#courses" class="nav-link">Courses</a></li>
+                    <li><a href="#placements" class="nav-link">Placements</a></li>
+                    <li><a href="#testimonials" class="nav-link">Students</a></li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="#faculty" class="nav-link">Faculty</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="header-right">
+                    <div class="header-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="hamburger">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-video-container">
+                <video autoplay loop muted playsinline class="hero-video" poster="https://placehold.co/1920x1080/0F172A/E2E8F0?text=Campus+View">
+                    <!-- Use a real video source if available -->
+                    <source src="pragathi4.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content container">
+                <h1 class="hero-title">WELCOME TO PRAGATHI</h1>
+                <p class="hero-tagline">25+ Years of Transforming Lives. Dedicated to Helping Students Achieve Greatness.</p>
+                <a href="#contact" class="btn btn-primary">Enroll Today</a>
+            </div>
+        </section>
+
+        <section id="stats" class="section-padding section-bg-light">
+             <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <h3 class="stat-number">20+</h3>
+                        <p class="stat-label">Offered Courses</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-user-graduate"></i>
+                        <h3 class="stat-number">95%</h3>
+                        <p class="stat-label">Placement Rate</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-university"></i>
+                        <h3 class="stat-number">25</h3>
+                        <p class="stat-label">Years of Excellence</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-users"></i>
+                        <h3 class="stat-number">5,000+</h3>
+                        <p class="stat-label">Happy Students</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section-padding">
+            <div class="container">
+                 <div class="section-header">
+                    <h2 class="section-title">Why Choose <span class="text-accent">Pragathi</span>?</h2>
+                </div>
+                <div class="why-us-grid">
+                    <div class="why-us-content">
+                        <p>We focus on holistic development, preparing students to excel both academically and professionally. Our innovative curriculum is designed to foster intellectual growth and critical thinking.</p>
+                        <ul class="features-list">
+                            <li><i class="fas fa-check-circle"></i> Experienced Faculty</li>
+                            <li><i class="fas fa-check-circle"></i> Dedicated Placement Support</li>
+                            <li><i class="fas fa-check-circle"></i> Vibrant & Inclusive Campus Life</li>
+                            <li><i class="fas fa-check-circle"></i> State-of-the-Art Infrastructure</li>
+                        </ul>
+                    </div>
+                    <div class="why-us-image">
+                        <img src="https://placehold.co/500x400/0EA5E9/ffffff?text=Learning+Environment" alt="Students learning at Pragathi College">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="courses" class="section-padding section-bg-dark">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Courses <span class="text-accent">(UG & PG)</span></h2>
+                </div>
+                <div class="courses-grid-container">
+                    <div class="course-category-card">
+                        <h3><i class="fas fa-graduation-cap"></i> PG Courses</h3>
+                        <ul>
+                            <li>» M.Com (Master of Commerce)</li>
+                            <li>» M.Sc (Statistics)</li>
+                        </ul>
+                    </div>
+                    <div class="course-category-card">
+                        <h3><i class="fas fa-atom"></i> B.Sc - Phy. Science</h3>
+                        <ul>
+                           <li>» Maths - Physics - Computer Science</li>
+                           <li>» Maths - Statistics - Computer Science</li>
+                           <li>» Maths - Chemistry - Computer Science</li>
+                           <li>» Maths - Electronics - Computer Science</li>
+                        </ul>
+                    </div>
+                    <div class="course-category-card">
+                        <h3><i class="fas fa-leaf"></i> B.Sc - Bio. Science</h3>
+                        <ul>
+                            <li>» Microbiology - Chemistry - Computer Science</li>
+                            <li>» Microbiology - Biochemistry - Chemistry</li>
+                            <li>» Botany - Zoology - Chemistry</li>
+                        </ul>
+                    </div>
+                     <div class="course-category-card">
+                        <h3><i class="fas fa-chart-line"></i> Commerce</h3>
+                        <ul>
+                            <li>» B.Com (Honors)</li>
+                            <li>» B.Com (General)</li>
+                            <li>» B.Com (Computer Applications)</li>
+                        </ul>
+                    </div>
+                     <div class="course-category-card">
+                        <h3><i class="fas fa-laptop-code"></i> Applications</h3>
+                        <ul>
+                            <li>» B.C.A (Bachelor of Computer Applications)</li>
+                        </ul>
+                    </div>
+                     <div class="course-category-card">
+                        <h3><i class="fas fa-briefcase"></i> Administration</h3>
+                        <ul>
+                            <li>» B.B.A (Bachelor of Business Administration)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="placements" class="section-padding section-bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Our Key <span class="text-accent">Recruiters</span></h2>
+                    <p class="section-subtitle">Connecting our talent with leading companies worldwide.</p>
+                </div>
+                <div class="recruiters-carousel-container">
+                    <div class="recruiters-carousel">
+                        <a href="https://www.tcs.com/" target="_blank" class="recruiter-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Tata_Consultancy_Services_Logo.svg" alt="TCS Logo"></a>
+                        <a href="https://www.infosys.com/" target="_blank" class="recruiter-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Infosys_logo.svg" alt="Infosys Logo"></a>
+                        <a href="https://www.wipro.com/" target="_blank" class="recruiter-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Wipro_Logo_2017.svg" alt="Wipro Logo"></a>
+                        <a href="https://www.amazon.in/" target="_blank" class="recruiter-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo"></a>
+                        <a href="https://www.cognizant.com/" target="_blank" class="recruiter-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Cognizant_logo.svg" alt="Cognizant Logo"></a>
+                        <a href="https://www.capgemini.com/" target="_blank" class="recruiter-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Capgemini_logo.svg" alt="Capgemini Logo"></a>
+                        <a href="https://www.hcltech.com/" target="_blank" class="recruiter-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/5/50/HCL_Technologies_logo.svg" alt="HCLTech Logo"></a>
+                        <a href="https://www.accenture.com/" target="_blank" class="recruiter-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Accenture_logo.svg" alt="Accenture Logo"></a>
+                        <a href="https://www.ibm.com/in-en/" target="_blank" class="recruiter-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM Logo"></a>
+                        <a href="https://www.microsoft.com/en-in/" target="_blank" class="recruiter-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft Logo"></a>
+                        
+                        <!-- Duplicate for seamless loop -->
+                        <a href="https://www.tcs.com/" target="_blank" class="recruiter-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Tata_Consultancy_Services_Logo.svg" alt="TCS Logo"></a>
+                        <a href="https://www.infosys.com/" target="_blank" class="recruiter-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Infosys_logo.svg" alt="Infosys Logo"></a>
+                        <a href="https://www.wipro.com/" target="_blank" class="recruiter-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Wipro_Logo_2017.svg" alt="Wipro Logo"></a>
+                        <a href="https://www.amazon.in/" target="_blank" class="recruiter-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo"></a>
+                        <a href="https://www.cognizant.com/" target="_blank" class="recruiter-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Cognizant_logo.svg" alt="Cognizant Logo"></a>
+                        <a href="https://www.capgemini.com/" target="_blank" class="recruiter-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Capgemini_logo.svg" alt="Capgemini Logo"></a>
+                        <a href="https://www.hcltech.com/" target="_blank" class="recruiter-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/5/50/HCL_Technologies_logo.svg" alt="HCLTech Logo"></a>
+                        <a href="https://www.accenture.com/" target="_blank" class="recruiter-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Accenture_logo.svg" alt="Accenture Logo"></a>
+                        <a href="https://www.ibm.com/in-en/" target="_blank" class="recruiter-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM Logo"></a>
+                        <a href="https://www.microsoft.com/en-in/" target="_blank" class="recruiter-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft Logo"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">What Our <span class="text-accent">Students Say</span></h2>
+                </div>
+                <div class="testimonial-carousel-wrapper">
+                    <div class="testimonial-carousel">
+                        <!-- Original Cards -->
+                        <div class="testimonial-card">
+                            <p class="quote">"The faculty are incredibly supportive and the infrastructure is top-notch. Pragathi truly fosters an environment for growth!"</p>
+                            <div class="student-info">
+                                <img src="https://placehold.co/60x60/F59E0B/ffffff?text=SR" alt="Student 1">
+                                <div>
+                                    <span class="student-name">Sunanda R.</span>
+                                    <span class="student-course">BBA Student</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <p class="quote">"I found my passion here! The curriculum is practical and the placement cell is dedicated to student success."</p>
+                            <div class="student-info">
+                                <img src="https://placehold.co/60x60/0EA5E9/ffffff?text=MK" alt="Student 2">
+                                <div>
+                                    <span class="student-name">Madhuri K.</span>
+                                    <span class="student-course">B.Sc (MSCS) Alumni</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                             <p class="quote">"Pragathi prepared me for the challenges of the professional world. Highly recommend their courses and vibrant campus life."</p>
+                            <div class="student-info">
+                                <img src="https://placehold.co/60x60/10B981/ffffff?text=SA" alt="Student 3">
+                                <div>
+                                    <span class="student-name">Sibtan A.</span>
+                                    <span class="student-course">M.Com Graduate</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                             <p class="quote">"The research opportunities are exceptional. It pushed me to think critically and innovatively."</p>
+                            <div class="student-info">
+                                <img src="https://placehold.co/60x60/EF4444/ffffff?text=PS" alt="Student 4">
+                                <div>
+                                    <span class="student-name">Priya S.</span>
+                                    <span class="student-course">B.Sc (Physics) Student</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Duplicated Cards for seamless animation -->
+                         <div class="testimonial-card">
+                            <p class="quote">"The faculty are incredibly supportive and the infrastructure is top-notch. Pragathi truly fosters an environment for growth!"</p>
+                            <div class="student-info">
+                                <img src="https://placehold.co/60x60/F59E0B/ffffff?text=SR" alt="Student 1">
+                                <div>
+                                    <span class="student-name">Sunanda R.</span>
+                                    <span class="student-course">BBA Student</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <p class="quote">"I found my passion here! The curriculum is practical and the placement cell is dedicated to student success."</p>
+                            <div class="student-info">
+                                <img src="https://placehold.co/60x60/0EA5E9/ffffff?text=MK" alt="Student 2">
+                                <div>
+                                    <span class="student-name">Madhuri K.</span>
+                                    <span class="student-course">B.Sc (MSCS) Alumni</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                             <p class="quote">"Pragathi prepared me for the challenges of the professional world. Highly recommend their courses and vibrant campus life."</p>
+                            <div class="student-info">
+                                <img src="https://placehold.co/60x60/10B981/ffffff?text=SA" alt="Student 3">
+                                <div>
+                                    <span class="student-name">Sibtan A.</span>
+                                    <span class="student-course">M.Com Graduate</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                             <p class="quote">"The research opportunities are exceptional. It pushed me to think critically and innovatively."</p>
+                            <div class="student-info">
+                                <img src="https://placehold.co/60x60/EF4444/ffffff?text=PS" alt="Student 4">
+                                <div>
+                                    <span class="student-name">Priya S.</span>
+                                    <span class="student-course">B.Sc (Physics) Student</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="section-padding section-bg-light">
+            <div class="container">
+                <div class="section-header">
+                     <h2 class="section-title">Life at <span class="text-accent">Pragathi</span></h2>
+                     <p class="section-subtitle">A glimpse into our vibrant campus, events, sports, and activities.</p>
+                </div>
+
+                <div class="gallery-tabs">
+                    <button class="tab-link active" data-target="#campus-gallery">Campus Life</button>
+                    <button class="tab-link" data-target="#events-gallery">Events & Fests</button>
+                    <button class="tab-link" data-target="#sports-gallery">Sports</button>
+                    <button class="tab-link" data-target="#ncc-gallery">NCC</button>
+                </div>
+
+                <div class="gallery-content">
+                    <div id="campus-gallery" class="gallery-grid active">
+                        <div class="gallery-item"><img src="https://placehold.co/400x300/6366F1/ffffff?text=Campus+Entrance" alt="Campus Entrance"><span>Campus Entrance</span></div>
+                        <div class="gallery-item"><img src="https://placehold.co/400x300/EC4899/ffffff?text=Library" alt="Library"><span>Library</span></div>
+                        <div class="gallery-item"><img src="https://placehold.co/400x300/8B5CF6/ffffff?text=Classroom" alt="Classroom"><span>Modern Classroom</span></div>
+                        <div class="gallery-item video-item" data-video-src="game.mp4">
+                            <img src="https://placehold.co/400x300/22C55E/ffffff?text=Campus+Tour+Video" alt="Campus Tour Video">
+                            <span>Campus Tour</span>
+                        </div>
+                        <div class="gallery-item"><img src="https://placehold.co/400x300/F97316/ffffff?text=Common+Room" alt="Student Common Room"><span>Student Common Room</span></div>
+                        <div class="gallery-item"><img src="https://placehold.co/400x300/14B8A6/ffffff?text=Greenery" alt="Campus Greenery"><span>Lush Greenery</span></div>
+                    </div>
+
+                    <div id="events-gallery" class="gallery-grid">
+                        <div class="gallery-item"><img src="https://placehold.co/400x300/3B82F6/ffffff?text=Annual+Day+1" alt="Annual Day"><span>Annual Day</span></div>
+                        <div class="gallery-item"><img src="https://placehold.co/400x300/F43F5E/ffffff?text=Cultural+Fest+2" alt="Cultural Fest"><span>Cultural Fest</span></div>
+                        <div class="gallery-item video-item" data-video-src="pragathi4.mp4">
+                            <img src="https://placehold.co/400x300/D946EF/ffffff?text=Fest+Video" alt="Fest Highlights Video">
+                            <span>Fest Highlights</span>
+                        </div>
+                        <div class="gallery-item"><img src="https://placehold.co/400x300/06B6D4/ffffff?text=Seminar" alt="Seminar"><span>Guest Seminar</span></div>
+                        <div class="gallery-item"><img src="https://placehold.co/400x300/F59E0B/ffffff?text=Workshop" alt="Workshop"><span>Tech Workshop</span></div>
+                        <div class="gallery-item"><img src="https://placehold.co/400x300/10B981/ffffff?text=Graduation" alt="Graduation Day"><span>Graduation Day</span></div>
+                    </div>
+
+                    <div id="sports-gallery" class="gallery-grid">
+                        <div class="gallery-item"><img src="https://placehold.co/400x300/EF4444/ffffff?text=Cricket" alt="Cricket Match"><span>Cricket Match</span></div>
+                        <div class="gallery-item video-item" data-video-src="fest12.mp4">
+                            <img src="https://placehold.co/400x300/84CC16/ffffff?text=Sports+Day+Video" alt="Sports Day Video">
+                            <span>Sports Day Highlights</span>
+                        </div>
+                        <div class="gallery-item"><img src="https://placehold.co/400x300/6366F1/ffffff?text=Volleyball" alt="Volleyball"><span>Volleyball Court</span></div>
+                        <div class="gallery-item"><img src="https://placehold.co/400x300/EC4899/ffffff?text=Indoor+Games" alt="Indoor Games"><span>Indoor Games</span></div>
+                        <div class="gallery-item"><img src="https://placehold.co/400x300/F97316/ffffff?text=Athletics" alt="Athletics"><span>Athletics Meet</span></div>
+                        <div class="gallery-item"><img src="https://placehold.co/400x300/22C55E/ffffff?text=Winners" alt="Winners"><span>Award Ceremony</span></div>
+                    </div>
+                    
+                    <div id="ncc-gallery" class="gallery-grid">
+                         <div class="gallery-item video-item" data-video-src="pragathi4.mp4">
+                            <img src="https://placehold.co/400x300/0F172A/ffffff?text=NCC+Parade+Video" alt="NCC Parade Video">
+                            <span>Parade Highlights</span>
+                        </div>
+                        <div class="gallery-item"><img src="https://placehold.co/400x300/3B82F6/ffffff?text=NCC+Drill" alt="NCC Drill"><span>Morning Drill</span></div>
+                        <div class="gallery-item"><img src="https://placehold.co/400x300/F43F5E/ffffff?text=NCC+Camp" alt="NCC Camp"><span>Annual Camp</span></div>
+                        <div class="gallery-item"><img src="https://placehold.co/400x300/D946EF/ffffff?text=NCC+Cadets" alt="NCC Cadets"><span>Our Cadets</span></div>
+                        <div class="gallery-item"><img src="https://placehold.co/400x300/06B6D4/ffffff?text=Social+Service" alt="Social Service"><span>Social Service</span></div>
+                        <div class="gallery-item"><img src="https://placehold.co/400x300/F59E0B/ffffff?text=Republic+Day" alt="Republic Day"><span>Republic Day Parade</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="faculty" class="section-padding section-bg-dark">
+             <div class="container">
+                <div class="section-header">
+                     <h2 class="section-title">Meet Our <span class="text-accent">Expert Faculty</span></h2>
+                     <p class="section-subtitle" style="color: #94A3B8;">The pillars of our academic excellence.</p>
+                </div>
+                <div class="faculty-grid">
+                    <div class="faculty-card">
+                        <img class="faculty-img" src="https://placehold.co/150x150/0EA5E9/ffffff?text=Prof.+A" alt="Faculty Member">
+                        <h4 class="faculty-name">Dr. Ananya Sharma</h4>
+                        <p class="faculty-qual">Ph.D. in CS</p>
+                        <p class="faculty-dept">Head of Computer Science</p>
+                    </div>
+                    <div class="faculty-card">
+                        <img class="faculty-img" src="https://placehold.co/150x150/0EA5E9/ffffff?text=Prof.+B" alt="Faculty Member">
+                        <h4 class="faculty-name">Prof. Vikram Singh</h4>
+                        <p class="faculty-qual">M.Com, M.Phil</p>
+                        <p class="faculty-dept">Head of Commerce</p>
+                    </div>
+                    <div class="faculty-card">
+                        <img class="faculty-img" src="https://placehold.co/150x150/0EA5E9/ffffff?text=Prof.+C" alt="Faculty Member">
+                        <h4 class="faculty-name">Dr. Priya Desai</h4>
+                        <p class="faculty-qual">Ph.D. in Physics</p>
+                        <p class="faculty-dept">Head of Sciences</p>
+                    </div>
+                    <div class="faculty-card">
+                        <img class="faculty-img" src="https://placehold.co/150x150/0EA5E9/ffffff?text=Prof.+D" alt="Faculty Member">
+                        <h4 class="faculty-name">Prof. Rohan Mehta</h4>
+                        <p class="faculty-qual">MBA (Finance)</p>
+                        <p class="faculty-dept">Head of BBA</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                     <h2 class="section-title">Contact <span class="text-accent">Us</span></h2>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-form-container">
+                        <h3>Send us a Message</h3>
+                        <form class="contact-form">
+                            <input type="text" placeholder="Full Name" required>
+                            <input type="email" placeholder="Email Address" required>
+                            <select name="courseOfInterest" required>
+                                <option value="">Select a Course of Interest</option>
+                                <option value="B.Com (General)">B.Com (General)</option>
+                                <option value="B.Com (Computer Applications)">B.Com (Computer Applications)</option>
+                                <option value="B.Sc (MPC)">B.Sc (MPC)</option>
+                                <option value="B.Sc (MSCS)">B.Sc (MSCS)</option>
+                                <option value="BCA(B.C.A)">B.C.A</option>
+                                <option value="BBA">BBA</option>
+                                <option value="M.Com">M.Com</option>
+                                <option value="M.Sc (Statistics)">M.Sc (Statistics)</option>
+                            </select>
+                            <textarea placeholder="Your Message" rows="5"></textarea>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                    <div class="contact-info-container">
+                        <h3>Our Address</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Pragathi Women's Degree College (11154)<br>Vivekananda Nagar Colony, Kukatpally, Hyderabad-72.</p>
+                        <h3>Call Us</h3>
+                        <p><i class="fas fa-phone"></i> +91 9849500392</p>
+                        <p><i class="fas fa-phone"></i> +91 8374664613</p>
+                        <h3>Email Us</h3>
+                        <p><i class="fas fa-envelope"></i> info@pragathicolleges.com</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-main container">
+            <div class="footer-grid">
+                <div class="footer-col" style="grid-column: span 2;">
+                    <img src="https://placehold.co/200x60/ffffff/0F172A?text=Pragathi" alt="Pragathi College Logo" class="footer-logo">
+                    <p class="footer-address">
+                        Pragathi Group of Institutions, Hyderabad.
+                    </p>
+                    <p><a href="tel:+919849500392" class="footer-contact-link">+91-9849500392</a></p>
+                    <p><a href="mailto:info@pragathicolleges.com" class="footer-contact-link">info@pragathicolleges.com</a></p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#placements">Placements</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#faculty">Faculty</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Branches</h4>
+                    <ul>
+                        <li>Pragathi Women's Degree College (11154), Kukatpally</li>
+                        <li>Pragathi Junior & Degree (CO-ED) (1155), K.P.H.B</li>
+                        <li>Pragathi Women's Degree College (2061), Chanda Nagar</li>
+                         <li>New Pragathi College of Commerce & Science (CO-ED) (2089), Chanda Nagar</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Facilities</h4>
+                     <ul>
+                        <li><a href="#faculty">Expert Faculty</a></li>
+                        <li><a href="#">The Library</a></li>
+                        <li><a href="#">Computer Lab</a></li>
+                        <li><a href="#gallery">Vibrant Campus</a></li>
+                        <li><a href="#">Sports Grounds</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col" style="grid-column: span 2;">
+                    <h4>Weekly Newsletter</h4>
+                    <p>Stay updated with our latest news and events.</p>
+                    <form class="newsletter-form">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; <span id="current-year">2025</span> Pragathi Degree College. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Gallery Lightbox HTML -->
+    <div id="gallery-lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <div class="lightbox-content"></div>
+    </div>
+
+    <a href="https://wa.me/919849500392" target="_blank" class="floating-btn whatsapp-btn">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // ============================
+            //  RESPONSIVE NAVIGATION
+            // ============================
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            document.querySelectorAll('.nav-link').forEach(link => link.addEventListener('click', () => {
+                if (navMenu.classList.contains('active')) {
+                     hamburger.classList.remove('active');
+                     navMenu.classList.remove('active');
+                }
+            }));
+            
+            // ============================
+            //  GALLERY TABS & LIGHTBOX
+            // ============================
+            const galleryTabs = document.querySelectorAll('.tab-link');
+            const galleryGrids = document.querySelectorAll('.gallery-grid');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const lightbox = document.getElementById('gallery-lightbox');
+            const lightboxContent = document.querySelector('.lightbox-content');
+            const lightboxClose = document.querySelector('.lightbox-close');
+
+            // Tab functionality
+            galleryTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    galleryTabs.forEach(item => item.classList.remove('active'));
+                    tab.classList.add('active');
+                    const target = tab.getAttribute('data-target');
+                    galleryGrids.forEach(grid => {
+                        grid.classList.remove('active');
+                    });
+                    document.querySelector(target).classList.add('active');
+                });
+            });
+
+            // Lightbox (popup) functionality
+            galleryItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const videoSrc = item.getAttribute('data-video-src');
+                    const imgSrc = item.querySelector('img').src;
+
+                    if (videoSrc) {
+                        lightboxContent.innerHTML = `<video src="${videoSrc}" controls autoplay></video>`;
+                    } else {
+                        lightboxContent.innerHTML = `<img src="${imgSrc}" alt="">`;
+                    }
+                    lightbox.classList.add('active');
+                });
+            });
+
+            const closeLightbox = () => {
+                lightbox.classList.remove('active');
+                lightboxContent.innerHTML = ''; // This stops video playback
+            };
+
+            lightboxClose.addEventListener('click', closeLightbox);
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) { // Close only if clicking the background
+                    closeLightbox();
+                }
+            });
+
+            // ============================
+            //  FORM SUBMISSION PLACEHOLDERS
+            // ============================
+            const setupFormAlert = (formSelector, message) => {
+                 const form = document.querySelector(formSelector);
+                 if(form) {
+                    form.addEventListener('submit', (e) => {
+                        e.preventDefault();
+                        // In a real app, you would not use alert. This is a placeholder.
+                        alert(message); 
+                        form.reset();
+                    });
+                 }
+            };
+            setupFormAlert('.contact-form', 'Thank you for your message! This is a demo form.');
+            setupFormAlert('.newsletter-form', 'Thank you for subscribing! (This is a demo)');
+            
+            // ============================
+            //  FOOTER CURRENT YEAR
+            // ============================
+            const currentYearSpan = document.getElementById('current-year');
+            if(currentYearSpan) {
+                currentYearSpan.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+</body>
+</html>
